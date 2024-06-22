@@ -4,6 +4,7 @@ const images = document.querySelectorAll('.images img');
 const dots = document.querySelectorAll('.dots .dot');
 const numImages = images.length;
 let currentImage = 0;
+let lastClicked = Date.now();
 for(let i = 1; i < numImages; i++) {
     images[i].style.opacity = '0';
     dots[i].style.opacity = '0.6';
@@ -19,21 +20,37 @@ function imageFadeOut(index) {
     dots[index].style.opacity = '0.6';
 }
 
-document.querySelector('.left-arrow').addEventListener('click', () => {
+function loadNextImage(step) {
     imageFadeOut(currentImage);
     
-    currentImage = (currentImage - 1 + numImages) % numImages;
+    currentImage = (currentImage + step + numImages) % numImages;
     
     imageFadeIn(currentImage);
+}
+
+document.querySelector('.left-arrow').addEventListener('click', () => {
+    lastClicked = Date.now();
+
+    loadNextImage(-1);
 });
 
 document.querySelector('.right-arrow').addEventListener('click', () => {
-    imageFadeOut(currentImage);
-    
-    currentImage = (currentImage + 1) % numImages;
-    
-    imageFadeIn(currentImage);
+    lastClicked = Date.now();
+
+    loadNextImage(1);
 });
+
+function autoNextImage() {
+    if (Date.now() - lastClicked >= 7000) {
+        loadNextImage(1);
+
+        lastClicked = Date.now();
+    }
+
+    setTimeout(autoNextImage, 250);
+}
+
+autoNextImage();
 
 // tutor search behavior
 
