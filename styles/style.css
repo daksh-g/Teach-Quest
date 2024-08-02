@@ -13,7 +13,7 @@ body {
     font-size: 80%;
 }
 
-h1, header a {
+h1, header li {
     font-family: 'Secular One', sans-serif;
     font-weight: 400;
 }
@@ -42,7 +42,7 @@ header ul {
     list-style-type: none;
 }
 
-header ul li a {
+header a {
     display: block;
     text-decoration: none;
     color: #FEF5E0;
@@ -58,7 +58,7 @@ header ul li a {
     margin-top: 1rem;
 }
 
-.about img {
+img[alt="Leaf logo in background"] {
     width: 72%;
     opacity: 0.25;
 
@@ -66,111 +66,6 @@ header ul li a {
     top: 1rem;
     right: 0.7rem;
     z-index: -1;
-}
-
-/* summer programs section */
-
-.slideshow-container {
-    margin: 1.5rem 0;
-    padding: 0 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.images {
-    position: relative;
-    height: 60%;
-}
-
-.images img {
-    transition: opacity 0.5s ease-in-out;
-    height: 100%;
-    width: 100%;
-}
-
-.images img + img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.left-arrow, .right-arrow {
-    cursor: pointer;
-
-    width: 44px;
-    height: 45px;
-
-    transition: opacity 0.5s ease-in-out;
-}
-
-.left-arrow:hover, .right-arrow:hover {
-    opacity: 0.6;
-}
-
-.dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.dot {
-    width: 20px;
-    height: 20px;
-
-    background-color: #FEF5E0;
-    border-radius: 50%;
-
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* tutoring section */
-
-.search-container {
-    font-weight: 500;
-    margin-top: 1rem;
-}
-
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.categories button {
-    font-size: 110%;
-    background-color: #E88E35;
-    color: #FEF5E0;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.5rem 1.5rem;
-
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-.search-and-results {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    flex-grow: 1;
-
-    margin-top: 1rem;
-}
-
-.search > input {
-    font-size: 110%;
-    background-color: #D9D9D9;
-    color: #32594A;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.5rem 1.5rem;
-    
-    width: 100%;
 }
 
 @media all and (min-width: 666px) {
@@ -182,6 +77,10 @@ header ul li a {
         font-size: 2.5rem;
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
     section {
         padding: 3.5rem 3rem;
     }
@@ -190,49 +89,7 @@ header ul li a {
         padding: 1.5rem 3rem;
     }
 
-    header a {
+    header li {
         font-size: 1.5rem;
-    }
-
-    /* summer program section */
-
-    .slideshow-container {
-        padding: 0 1.5rem;
-    }
-
-    .left-arrow, .right-arrow {
-        width: 88px;
-        height: 90px;
-    }
-
-    .dot {
-        width: 30px;
-        height: 30px;
-    }
-
-    /* tutoring section */
-
-    .search-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    .categories {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 1rem;
-    }
-
-    .categories button {
-        font-size: 1.5rem;
-    }
-
-    .search-and-results {
-        margin-top: 0;
-    }
-
-    .search > input {
-        font-size: 1.75rem;
     }
 }
