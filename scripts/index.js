@@ -1,3 +1,5 @@
+import buttonSelectionBehavior from "./utils/buttonSelectionBehavior.js";
+
 // slideshow behavior
 
 const images = document.querySelectorAll('.images img');
@@ -56,23 +58,4 @@ autoNextImage();
 
 const search = document.querySelector('.search input');
 const results = document.querySelector('.results');
-const categories = document.querySelectorAll('.categories button');
-const numCategories = categories.length;
-let currentCategory = categories[0];
-currentCategory.style.backgroundColor = '#B86614';
-for(let category of categories) {
-    category.addEventListener('mouseover', () => {
-        category.style.backgroundColor = '#B86614';
-    });
-
-    category.addEventListener('mouseout', () => {
-        if(category !== currentCategory)
-            category.style.backgroundColor = '#E88E35';
-    });
-
-    category.addEventListener('click', () => {
-        currentCategory.style.backgroundColor = '#E88E35';
-        currentCategory = category;
-        currentCategory.style.backgroundColor = '#B86614';
-    });
-}
+buttonSelectionBehavior('.categories > button', '#E88E35', '#B86614', 0, (oldButton, newButton) => {});

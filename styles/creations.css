@@ -1,0 +1,51 @@
+.years {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.years > button {
+    font-size: 110%;
+    background-color: #E88E35;
+    color: #FEF5E0;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+  
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.creations {
+    display: grid;
+    margin-top: -2.25rem;
+}
+
+.creations > div {
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.creations .students {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #E88E35;
+    color: #FEF5E0;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.creations button {
+    font-size: 100%;
+    font-weight: bold;
+    background-color: #ECFEAA;
+    color: #372772;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+}

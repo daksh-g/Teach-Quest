@@ -11,6 +11,10 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 80%;
+
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 4rem;
 }
 
 h1, header li {
@@ -66,6 +70,19 @@ img[alt="Leaf logo in background"] {
     top: 1rem;
     right: 0.7rem;
     z-index: -1;
+}
+
+/* footer section */
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #25995C;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 @media all and (min-width: 666px) {
