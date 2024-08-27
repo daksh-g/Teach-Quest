@@ -40,7 +40,7 @@
     text-align: center;
 }
 
-.creations button {
+.students > button {
     font-size: 100%;
     font-weight: bold;
     background-color: #ECFEAA;
@@ -48,4 +48,35 @@
     border: none;
     border-radius: 1rem;
     padding: 0.5rem 1.5rem;
+
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.works {
+    display: grid;
+}
+
+.works > div {
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    padding-top: 1rem;
+
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.works a {
+    text-decoration: underline;
+    color: #FEF5E0;
+}
+
+.works img {
+    margin-top: 1rem;
+}
+
+.student-ananya > .images {
+    display: flex;
+    flex-direction: row;
 }
